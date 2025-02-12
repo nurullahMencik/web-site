@@ -1,0 +1,161 @@
+/* Form kapsayıcı alan */
+.form-wrapper {
+  height: 100vh;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  background: linear-gradient(
+    135deg,
+    #ff8008,
+    #1e3c72
+  ); /* Daha modern ve şık degrade */
+}
+
+/* Form kapsayıcı */
+.form-container {
+  width: 100%;
+  max-width: 700px; /* Genişlik biraz azaltıldı */
+  padding: 20px; /* Kenar boşlukları düzenlendi */
+
+  background: #ffffff; /* Beyaz arka plan */
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+  text-align: center;
+  color: #333; /* Kontrastlı metin rengi */
+}
+
+/* Form başlığı */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722; /* Enerjik bir başlık rengi */
+  font-weight: bold;
+}
+
+/* Form grupları */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Etiketler */
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555; /* Orta ton metin rengi */
+  font-weight: 600;
+}
+
+/* Input ve textarea */
+input,
+textarea {
+  width: calc(100% - 24px); /* Taşmayı önlemek için genişlik ayarlandı */
+  padding: 10px; /* Daha dengeli bir padding */
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/* Focus efekti */
+input:focus,
+textarea:focus {
+  border-color: #ff5722; /* Modern turuncu vurgu */
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.4);
+  background-color: #fff3e0; /* Hafif pastel turuncu */
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  height: 100px; /* Çok uzun olmaması için optimize edildi */
+  line-height: 1.5; /* Daha okunaklı hale getirildi */
+}
+
+/* Gönder butonu */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(
+    135deg,
+    #ff512f,
+    #dd2476
+  ); /* Şık kırmızı degrade */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover efekti */
+button:hover {
+  background: linear-gradient(
+    135deg,
+    #c31432,
+    #240b36
+  ); /* Daha koyu bir vurgu */
+  transform: translateY(-3px);
+}
+
+/* Active efekti */
+button:active {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  transform: translateY(1px);
+}
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 10px; /* Daha fazla kenar boşluğu */
+  }
+
+  .form-container {
+    padding: 20px; /* Form içeriği daha kompakt */
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 1.6rem; /* Başlık boyutları küçültüldü */
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem; /* Metin kutuları için daha küçük yazı boyutu */
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Küçük telefonlar için medya sorgusu */
+@media (max-width: 480px) {
+  .form-container {
+    border-radius: 10px;
+    padding: 15px; /* Daha sıkışık bir tasarım */
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Küçük başlık boyutu */
+  }
+
+  input,
+  textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}

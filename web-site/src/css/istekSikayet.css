@@ -1,0 +1,146 @@
+/* Form Kapsayıcı */
+.istek-sikayet-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff8008, #1e3c72);
+}
+
+/* Form İç Kapsayıcı */
+.istek-sikayet-container {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 80px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #333;
+}
+
+/* Başlık */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* Form Elemanları */
+.istek-sikayet-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Etiketler */
+.istek-sikayet-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Input ve Textarea */
+.istek-sikayet-group input,
+.istek-sikayet-group textarea,
+.istek-sikayet-group select {
+  width: calc(100% - 24px);
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Efekti */
+.istek-sikayet-group input:focus,
+.istek-sikayet-group textarea:focus,
+.istek-sikayet-group select:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.4);
+  background-color: #fff3e0;
+}
+
+/* Textarea */
+.istek-sikayet-group textarea {
+  resize: none;
+  height: 100px;
+  line-height: 1.5;
+}
+
+/* Gönder Butonu */
+.istek-sikayet-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Efekti */
+.istek-sikayet-button:hover {
+  background: linear-gradient(135deg, #c31432, #240b36);
+  transform: translateY(-3px);
+}
+
+/* Active Efekti */
+.istek-sikayet-button:active {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  transform: translateY(1px);
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+  .istek-sikayet-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .istek-sikayet-group input,
+  .istek-sikayet-group textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .istek-sikayet-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .istek-sikayet-container {
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .istek-sikayet-group input,
+  .istek-sikayet-group textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .istek-sikayet-button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}

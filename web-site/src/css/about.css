@@ -1,0 +1,140 @@
+/* Genel Stil */
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    #feb47b
+  ); /* Modern gradient arka plan */
+  color: #333;
+  text-align: center;
+}
+
+/* Hakkımızda Konteyner */
+.about-container {
+  max-width: 90%;
+  width: 100%;
+  padding: 40px 20px;
+  margin: 50px auto;
+  margin-top: 100px;
+  background: rgba(255, 255, 255, 0.8); /* Yarı şeffaf beyaz arka plan */
+  backdrop-filter: blur(10px); /* Blur efekti ile modern görünüm */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-container:hover {
+  transform: translateY(-5px); /* Hafif yukarı kalkma efekti */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* İçerik */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  -webkit-background-clip: text; /* WebKit Tarayıcılar için */
+  background-clip: text; /* Standart Özellik */
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Buton Tasarımı */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 30px 15px;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px 10px;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-container {
+    padding: 15px 10px;
+    margin-top: 150px;
+    margin-left: 10px; /* Ekran küçük olduğunda daha iyi hizalama */
+    margin-bottom: 0px;
+  }
+
+  .about-content {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .about-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+}

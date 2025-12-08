@@ -1,0 +1,38 @@
+// 🔹 Dosyaları yükle
+ForAll(
+    DataCardValue104_7.Attachments,
+    'PowerAppV2->Createfile,Updatefileproperties'.Run(
+        varSeciliHakedis.HakedisID,
+        varKullanıcıID,
+        varKullanıcıAdıSoyadı,
+        {
+            file: {
+                name: ThisRecord.Name,
+                contentBytes: ThisRecord.Value
+            }
+        }
+    )
+);
+
+// 🔹 Log kaydı oluştur
+Patch(
+    Loglars,
+    Defaults(Loglars),
+    {
+        HakedisID: varSeciliHakedis,
+        Aciklama: varKullanıcıAdıSoyadı & " adlı kullanıcı hakedişe dosya yükledi."
+    }
+);
+
+// 🔹 Alanları sıfırla ve bildirim göster
+Reset(DataCardValue104_7);
+NotificationToaster_3.Notify(
+    "✅ Başarılı",
+    NotificationType.Success,
+    "Hakediş dosyaları kaydedildi.",
+    2500
+);
+Refresh(OptimalDoc); 
+Refresh(Loglars);
+// 🔹 3 saniye sonra yenile
+UpdateContext({ varStartTimer: true });
